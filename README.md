@@ -34,15 +34,15 @@ flowchart LR
 |`financial_product_name`|종목명||
 |`ticker`|티커||
 |`currency`|통화||
-|`number_of_shares`|보유수랑||
-|`avg_purchase_price`|매수평단가|$total\_cost/number\_of\_shares$|
+|`number_of_shares`|보유수량||
+|`avg_purchase_price`|매수평단가|`total_cost / number_of_shares`|
 |`market_price`|현재가|현재 1주(최소 구매단위) 평가액|
 |`total_cost`|매수총금액|현재 주식을 사기위해 지불한 총금액|
-|`total_market_value`|평가총금액|$number\_of\_shared * market\_price$|
-|`cumulative_realized_gain`|누적실현손익|$total\_gain - total\_loss$|
-|`unrealized_gain`|미실현손익|$total\_market\_value-total\_cost$|
-|`unrealized_roi`|미실현수익률|$(unrealized\_gain/total\_cost)*100$|
-|`total_return`|총수익|$cumulative\_realized\_gain+unrealized\_gain$|
+|`total_market_value`|평가총금액|`number_of_shares * market_price`|
+|`cumulative_realized_gain`|누적실현손익|`total_gain - total_loss`|
+|`unrealized_gain`|미실현손익|`total_market_value - total_cost`|
+|`unrealized_roi`|미실현수익률|`(unrealized_gain / total_cost) * 100`|
+|`total_return`|총수익|`cumulative_realized_gain + unrealized_gain`|
 
 ## 티커 획득법
 
