@@ -83,27 +83,3 @@ print(get_us_ticker("Apple"))      # AAPL
 print(get_us_ticker("Microsoft"))  # MSFT
 print(get_us_ticker("Nvidia"))     # NVDA
 ```
-
-
-
-# 엑셀 읽기
-```bash
-pip install pandas openpyxl
-```
-
-```py
-import pandas as pd
-
-# 엑셀 파일 읽기
-file_path = "sample.xlsx"
-df = pd.read_excel(file_path)
-
-# 방법 A: 각 행을 딕셔너리 형태로 순회 (열 이름으로 접근하기 편함)
-for index, row in df.iterrows():
-    print(f"[{index}행] {row.to_dict()}")
-    # 특정 컬럼 값 접근 예시: row['이름'], row['나이']
-
-# 방법 B: 튜플 형태로 순회 (대용량 데이터 시 처리 속도가 훨씬 빠름)
-# for row in df.itertuples(index=True):
-#     print(row)
-```
